@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
 from fixture.session import SessionHelper
+from fixture.project import ProjectHelper
 
 class Application:
     def __init__(self, browser, base_url):
@@ -13,7 +14,7 @@ class Application:
         else:
             raise ValueError("Unrecignized browser %s " % browser)
         self.session = SessionHelper(self)
-
+        self.project = ProjectHelper(self)
         self.base_url = base_url
 
     def is_valid(self):
@@ -22,6 +23,9 @@ class Application:
             return True
         except:
             return False
+
+    def destroy(self):
+        self.wd.quit()
 
     def is_session_valid(self):
         try:
@@ -41,8 +45,13 @@ class Application:
         # open home page
         wd.get(self.base_url)
 
-    def destroy(self):
-        self.wd.quit()
+
+    def open_projects_page(self):
+         wd.find_element_by_xpath("//div[@id='sidebar']/ul/li[7]/a/i").click
+
+    def manage(self):
+         self.wd.find_element_by_xpath("//a[contains(text(),'Управление проектами')]").click
+
 
 
 
