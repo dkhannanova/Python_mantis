@@ -1,0 +1,56 @@
+[
+  {
+    "py/object": "model.project.Project",
+    "description": "",
+    "globaled": "",
+    "id": null,
+    "name": "",
+    "state": "",
+    "visibility": ""
+  },
+  {
+    "py/object": "model.project.Project",
+    "description": "descvMhUMEU;cpvez;*p9Hy86eP$zLH[kceD841b\\qgx:l@yX@yBcM/@l5(:B/pt!?/wC\"c*\"<T+F63F&py8_j|>Jcq`",
+    "globaled": false,
+    "id": null,
+    "name": "nameb|FO/?*xg2u\"7xw;dw|Bh~PEE\"-fpTLt\\>,",
+    "state": "0",
+    "visibility": " "
+  },
+  {
+    "py/object": "model.project.Project",
+    "description": "desc7fSj!AK\"SYH(x?6ys[>9hRW>I6U\\_BC+]",
+    "globaled": false,
+    "id": null,
+    "name": "nameMp",
+    "state": "\"",
+    "visibility": "5"
+  },
+  {
+    "py/object": "model.project.Project",
+    "description": "descLus<>VL=t}4TZ*6:\\pGYuM;53%l{~dqqgUB:9'NH[e7K'sB/r=`t7Ey&A7Gf_]bKHR3.DOU@lVBY9SXlG]c|;BgkRST-k*Jhfw>C%UueP_%,w",
+    "globaled": false,
+    "id": null,
+    "name": "name<?A\\d]vp0O~)js3+Fu,V\"shE{iX,!ZS\\>p##a$(<CZ",
+    "state": " ",
+    "visibility": "["
+  },
+  {
+    "py/object": "model.project.Project",
+    "description": "descDqO*rB{M0=uK4dcP)@tc+U&>iPZ2V#yqPn\\u+rc;mubMQ'4Ljv-(r)YMz+#3I6!'/?Y*JYoG`%S\"4\"A^;y)<R#iY#,EY!^n2!q?i&JKZs%/dy,-&?~i,1_R",
+    "globaled": false,
+    "id": null,
+    "name": "nameNKN>8xP8&OcVT9t+5?%%IwK{?$",
+    "state": "\"",
+    "visibility": ","
+  },
+  {
+    "py/object": "model.project.Project",
+    "description": "descR`Y08j%|NM8]}`RT^[jsDuhQu@}Q}vtrP}y^clv#B$ZX),5-4C2I",
+    "globaled": true,
+    "id": null,
+    "name": "namePE[P",
+    "state": "1",
+    "visibility": "\""
+  }
+]
