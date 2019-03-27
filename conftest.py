@@ -5,10 +5,13 @@ import jsonpickle
 import os.path
 import importlib
 from fixture.db import DbFixture
+from fixture.soap import SoapHelper
 import ftputil
+from suds.client import Client
 
 fixture = None
 target = None
+
 
 def load_config(file):
     global target
@@ -17,6 +20,7 @@ def load_config(file):
         with open(path) as config:
             target = json.load(config)
     return target
+
 
 
 @pytest.fixture
@@ -43,12 +47,21 @@ def stop(request):
 def db(request):
     db_config = load_config(request.config.getoption("--target"))['db']
     #инициализируем собственный класс DbFixture
-    dbfixture=DbFixture(host=db_config['host'], name=db_config['name'], user=db_config['user'], password=db_config['password'])
+    dbfixture = DbFixture(host=db_config['host'], name=db_config['name'], user=db_config['user'], password=db_config['password'])
 
     def fin():
         dbfixture.destroy()
     request.addfinalizer(fin)
     return dbfixture
+
+#def autorize(request):
+ #   autorize_config = load_config(request.config.getoption("--target"))['webadmin']
+  #  autorizefixture = SoapHelper(soapuser=autorize_config['username'], soappass=autorize_config['password'])
+
+    #def fin():
+        #autorizefixture.destroy()
+    #request.addfinalizer(fin)
+   # return autorizefixture
 
 
 def pytest_addoption(parser):

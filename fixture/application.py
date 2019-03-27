@@ -2,9 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.support.select import Select
 from fixture.session import SessionHelper
 from fixture.project import ProjectHelper
+from fixture.soap import SoapHelper
 
 class Application:
-    def __init__(self, browser, base_url):
+    def __init__(self, browser, base_url):#, config
         if browser =="firefox":
             self.wd = webdriver.Firefox()
         elif browser =="chrome":
@@ -15,7 +16,10 @@ class Application:
             raise ValueError("Unrecignized browser %s " % browser)
         self.session = SessionHelper(self)
         self.project = ProjectHelper(self)
+        #self.config = config
         self.base_url = base_url
+        self.soap = SoapHelper(self)
+
 
     def is_valid(self):
         try:

@@ -41,7 +41,7 @@ def random_visible():
     return random.choice(list)
 
 
-testdata = [Project(name=random_string("name", 60), state=random_state(), globaled=random.choice([True, False]), visibility=random_visible(), description = random_string("desc", 128))
+testdata = [Project(name=random_string("name", 60), state=random_state(), enabled=random.choice([True, False]), visibility=random_visible(), description = random_string("desc", 128))
     for i in range(n)]
 
 

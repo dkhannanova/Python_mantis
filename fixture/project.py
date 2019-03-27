@@ -22,7 +22,7 @@ class ProjectHelper:
         wd = self.app.wd
         self.fill_field('name', project.name)
         self.fill_field('status', project.state)
-        self.fill_field('inherit_global', project.globaled)
+        self.fill_field('inherit_global', project.enabled)
         self.fill_field('view_state', project.visibility)
         self.fill_field('description', project.description)
         wd.find_element_by_xpath("//form[@id='manage-project-create-form']/div/div[3]/input").click()
